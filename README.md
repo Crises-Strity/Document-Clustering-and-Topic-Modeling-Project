@@ -7,7 +7,7 @@ A research-grade repository for **unsupervised document analysis** using **TF-ID
 
 ---
 
-## 📦 Repository Structure
+## Repository Structure
 ```
 document-clustering-topic-modeling/
 ├── data/                           # Place your raw data here
@@ -22,13 +22,13 @@ document-clustering-topic-modeling/
 └── README.md
 ```
 
-## 🔬 Methodology
+## Methodology
 - **Vectorization**: `TfidfVectorizer` (for clustering), `CountVectorizer` (for LDA) with English stopwords
 - **Clustering**: `KMeans (k clusters)` using TF-IDF features
 - **Topic Modeling**: `LatentDirichletAllocation (n_topics)`
 - **Evaluation**: `silhouette score` (for KMeans); topic quality via top words
 
-## 🗂️ Dataset
+## Dataset
 You can supply documents in either format:
 1. **CSV file** with a text column (default candidates: `text`, `content`, `abstract`, `body`).  
    Example path: `data/sample.csv`
@@ -37,7 +37,7 @@ You can supply documents in either format:
 
 > The repository intentionally ships with an empty `data/` folder so you can insert your own raw data.
 
-## 🧰 Installation
+## Installation
 ```bash
 python -m venv .venv
 # Windows
@@ -48,7 +48,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## ▶️ Usage
+## Usage
 ### Option A: CSV input
 ```bash
 python src/topic_modeling.py   --input data/sample.csv   --text_col text   --k 8   --n_topics 10
@@ -76,11 +76,11 @@ python src/topic_modeling.py   --input data/texts_dir   --k 8   --n_topics 10
 - Export plots (cluster sizes, topic wordbars)
 - Optional **lemmatization**
 
-## 📝 License
+## License
 This project is released under the **MIT License** (see `LICENSE`).
 
-## 📝 Citation
+## Citation
 If you use this repository, please cite:
 ```
-Your Name. Document Clustering and Topic Modeling. GitHub repository, 2025.
+Cris Wang. Document Clustering and Topic Modeling. GitHub repository, 2025.
 ```
